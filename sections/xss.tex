@@ -1,7 +1,7 @@
 \section{Reflected Cross Site Scripting (XSS)}
-\paragraph{Vulnerabilidad} Cross-Site Scripting son un tipo de inyección en el cual un
+\paragraph{Vulnerabilidad} Cross-Site Scripting es un tipo de inyección en el cual un
 script malicioso es inyectado en la web. En este caso nos centramos en el {\it reflected}, 
-el cual consiste en ejecutar el script desde entradas de la web sin validar. EN nuestro caso 
+el cual consiste en ejecutar el script desde entradas de la web sin validar. En nuestro caso 
 trataremos de obtener las cookies de sesión mediante este ataque.
 \paragraph{Nivel bajo} En esta pantalla se nos muestra únicamente un input,
 por lo que será nuestro único punto de ataque. Lo primero que haremos será comprobar que permite ejecutar
@@ -41,7 +41,7 @@ lo que tratamos de modificar la entrada de la siguiente forma:
 \begin{lstlisting}
     <sCriPt>alert(document.cookie)</ScripT>
 \end{lstlisting}
-el resultado fue satisfactorio, dado que únicamente controlan que no esté la palabra {\it script}, pero 
+El resultado fue satisfactorio, dado que únicamente controlan que no esté la palabra {\it script}, pero 
 al modificarlo y no ser {\it Case sensitive} el {\it html} se obtuvo las credenciales. No se ha considerado necesario 
 poner una captura del resultado dado que el resultado es el mismo que en la figura \ref{fig:low} pero con otro
 ID de sesión. Este ataque no funcionará en niveles superiores porque tendrán una mejor expresión regular
