@@ -36,12 +36,12 @@ posiblemente en niveles superiores no servirá este ataque dado que habrá una e
 que valide la entrada
 
 \paragraph{Nivel medio} La idea de este nivel es evitar una posible validación por expresión regular. 
-La más simple sería una que permita todas las entradas menos las que contengan la palabra "{\it script}", por
+La más simple sería una que permita todas las entradas menos las que contengan la palabra {\it script}, por
 lo que tratamos de modificar la entrada de la siguiente forma:
 \begin{lstlisting}
     <sCriPt>alert(document.cookie)</ScripT>
 \end{lstlisting}
-el resultado fue satisfactorio, dado que únicamente controlan que no esté la palabra "{\it script}", pero 
+el resultado fue satisfactorio, dado que únicamente controlan que no esté la palabra {\it script}, pero 
 al modificarlo y no ser {\it Case sensitive} el {\it html} se obtuvo las credenciales. No se ha considerado necesario 
 poner una captura del resultado dado que el resultado es el mismo que en la figura \ref{fig:low} pero con otro
 ID de sesión. Este ataque no funcionará en niveles superiores porque tendrán una mejor expresión regular
