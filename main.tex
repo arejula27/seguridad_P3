@@ -8,10 +8,12 @@
 %estilo de citas
 \usepackage{natbib}
 \setcitestyle{numbers}
+%code
+\usepackage{listings}
 
 
 \title{Title}
-\author{Íñigo Aréjula Aísa}
+\author{Íñigo Aréjula Aísa, Héctor Bara LLes}
 \date{Noviembre 2021}
 
 \begin{document}
@@ -20,6 +22,12 @@
 \newpage
 \tableofcontents
 \newpage
+
+\include{sections/xss.tex}
+\include{sections/file_upload.tex}
+\include{sections/file_inclusion.tex}
+\include{sections/sql_inyection.tex}
+\include{sections/weak_sesion.tex}
 
 
 
